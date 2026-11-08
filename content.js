@@ -36,10 +36,6 @@ window.CONTENT = {
     // Es la apertura de la acreditación del Día 1.
     inicio: '2026-11-21T07:00:00-05:00',
 
-    // Archivo del PDF. Si no existe, el botón muestra un aviso amable.
-    pdf: './assets/guia-conal-2026.pdf',
-    pdfNombre: 'Guia-CONAL-2026.pdf',
-
     // [PLACEHOLDER] número del comité organizador (formato internacional, sin signos).
     whatsapp: '573000000000',
     whatsappMensaje: 'Hola, comité CONAL 2026. Tengo una pregunta sobre el evento.',
@@ -105,7 +101,6 @@ window.CONTENT = {
     tituloScript: 'Asistente',       // esta palabra va en tipografía script
     subtitulo: 'Todo lo que necesitas para vivir la mejor experiencia en Medellín.',
     botonPrimario: 'Comenzar la experiencia',
-    botonSecundario: 'Descargar PDF',
     desliza: 'Desliza',
     cuentaRegresivaTitulo: 'Faltan',
     cuentaRegresivaNota: 'Para la apertura de la acreditación · sábado 21 de noviembre, 7:00 a. m.',
@@ -801,7 +796,7 @@ window.CONTENT = {
      ───────────────────────────────────────────────────────────────────────── */
   playlist: {
     titulo: 'Playlist oficial',
-    embedUrl: '',   // ej: 'https://open.spotify.com/embed/playlist/XXXXXXXX?utm_source=generator'
+    embedUrl: 'https://open.spotify.com/embed/playlist/4O153fMjWRr5GwLyxUwF1A',
     vacio: '[PLACEHOLDER] Pega aquí el enlace del embed de Spotify en content.js → playlist.embedUrl'
   },
 
@@ -814,7 +809,6 @@ window.CONTENT = {
     texto1: 'Medellín te espera con sus flores, sus montañas y su gente.',
     texto2: 'Guarda estos recuerdos y comparte la experiencia.',
     botones: {
-      pdf: 'Descargar guía',
       whatsapp: 'WhatsApp',
       contactos: 'Contactos',
       sedes: 'Sedes'
@@ -838,7 +832,6 @@ window.CONTENT = {
     cerrar: 'Cerrar',
     sos: 'SOS',
     secciones: 'Secciones',
-    pdfNoDisponible: 'El PDF todavía no está listo. Apenas lo publique el comité, aparecerá aquí mismo.',
     dias: 'días', horas: 'horas', minutos: 'min', segundos: 'seg'
   }
 };

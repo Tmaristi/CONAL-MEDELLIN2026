@@ -194,8 +194,6 @@ table{border-collapse:collapse;width:100%}
 .hdr__nav a:hover{background:rgba(255,255,255,.12);color:#fff}
 .hdr__nav a[aria-current="true"]{background:var(--amarillo);color:var(--morado-profundo)}
 .hdr__act{display:flex;align-items:center;gap:8px;margin-left:auto}
-.btn--pdf{--bg:var(--fucsia);--fg:#fff;padding:10px 16px;font-size:14px;box-shadow:0 4px 0 var(--orquidea)}
-.btn--pdf:hover{box-shadow:0 6px 0 var(--orquidea)}
 .burger{
   display:grid;place-content:center;width:42px;height:42px;border:0;border-radius:14px;
   background:rgba(255,255,255,.14);color:#fff;cursor:pointer;

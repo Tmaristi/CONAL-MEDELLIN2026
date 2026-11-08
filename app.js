@@ -190,26 +190,6 @@
     toastTimer = setTimeout(function () { toastEl.hidden = true; }, 5200);
   }
 
-  /* ───────────────────────────── PDF ───────────────────────────── */
-
-  function descargarPdf() {
-    var url = C.meta.pdf;
-    var abrir = function () {
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = C.meta.pdfNombre || '';
-      a.target = '_blank';
-      a.rel = 'noopener';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    };
-    if (location.protocol === 'file:') { abrir(); return; }
-    fetch(url, { method: 'HEAD', cache: 'no-store' })
-      .then(function (r) { r.ok ? abrir() : toast(C.ui.pdfNoDisponible); })
-      .catch(function () { toast(C.ui.pdfNoDisponible); });
-  }
-
   /* ═══════════════════════════ CABECERA Y NAVEGACIÓN ═══════════════════════ */
 
   function renderNav() {
@@ -253,7 +233,6 @@
     document.addEventListener('click', function (e) {
       if (e.target.closest('[data-menu-open]')) { abrir(); }
       else if (e.target.closest('[data-menu-close]')) { cerrar(); }
-      else if (e.target.closest('[data-pdf]')) { descargarPdf(); }
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !panel.hidden) cerrar();
@@ -286,7 +265,6 @@
       '<p class="hero__sub">' + ph(h.subtitulo) + '</p>' +
       '<div class="hero__btns">' +
         '<a class="btn btn--amarillo btn--lg" href="#acceso">' + esc(h.botonPrimario) + icon('arrow') + '</a>' +
-        '<button class="btn btn--ghost btn--lg" type="button" data-pdf>' + esc(h.botonSecundario) + icon('download') + '</button>' +
       '</div>' +
       '<a class="scrolldown" href="#acceso">' + esc(h.desliza) + icon('arrow-down') + '</a>';
 
@@ -867,7 +845,6 @@
       '<h2 class="reveal">' + ph(c.tituloLinea1) + '<em>' + esc(c.tituloDestacado) + '</em></h2>' +
       '<p class="reveal">' + ph(c.texto1) + '<br>' + ph(c.texto2) + '</p>' +
       '<div class="cierre__btns reveal">' +
-        '<button class="btn btn--amarillo" type="button" data-pdf>' + icon('download') + esc(b.pdf) + '</button>' +
         '<a class="btn btn--verde" href="' + esc(waLink()) + '" target="_blank" rel="noopener">' + icon('whatsapp') + esc(b.whatsapp) + '</a>' +
         '<a class="btn btn--ghost" href="#contactos">' + icon('phone') + esc(b.contactos) + '</a>' +
         '<a class="btn btn--ghost" href="#sedes">' + icon('pin') + esc(b.sedes) + '</a>' +
