@@ -507,9 +507,9 @@ window.CONTENT = {
     subtitulo: 'La organización cubre los traslados entre sedes. Lo demás corre por tu cuenta.',
 
     tarjetas: [
-      { icono: 'pin',   titulo: 'Punto de encuentro', valor: '[PLACEHOLDER] Por confirmar',   detalle: '[PLACEHOLDER] Llega 15 minutos antes de la hora de salida.' },
-      { icono: 'clock', titulo: 'Hora de salida',     valor: '[PLACEHOLDER] 00:00 a. m.',     detalle: '[PLACEHOLDER] El bus sale puntual. No hay segundo viaje.' },
-      { icono: 'bus',   titulo: 'Regreso',            valor: '[PLACEHOLDER] 00:00 p. m.',     detalle: '[PLACEHOLDER] Llegada estimada a Medellín por confirmar.' }
+      { icono: 'pin',   titulo: 'Punto de encuentro', valor: 'Universidad de Antioquia', detalle: 'Sábado 21. Lugar exacto de abordaje por confirmar. Llega 15 minutos antes.' },
+      { icono: 'clock', titulo: 'Hora de salida',     valor: '5:40 p. m.',               detalle: 'Abordaje y Refrigerio 2 desde las 5:10 p. m. El bus sale puntual: no hay segundo viaje.' },
+      { icono: 'bus',   titulo: 'Regreso',            valor: '8:00 p. m.',               detalle: 'Lunes 23: salida de El Yarumito a las 6:00 p. m., llegada estimada a Medellín.' }
     ],
 
     recomendaciones: [
@@ -523,15 +523,15 @@ window.CONTENT = {
 
     tarifas: {
       titulo: 'Tarifas del transporte público',
-      nota: '[PLACEHOLDER] Tarifas de referencia 2026, pendientes de actualizar con los valores oficiales del año.',
+      nota: 'Tarifas de referencia 2026. El valor puede variar; confirma en las taquillas o apps oficiales.',
       columnas: ['Medio', 'Lun a Sáb', 'Dom y festivos'],
       filas: [
-        { medio: 'Metro (línea A y B)',       lunSab: '[PLACEHOLDER] $0.000', domFest: '[PLACEHOLDER] $0.000' },
-        { medio: 'Metrocable (integrado)',    lunSab: '[PLACEHOLDER] $0.000', domFest: '[PLACEHOLDER] $0.000' },
-        { medio: 'Metrocable (turístico)',    lunSab: '[PLACEHOLDER] $0.000', domFest: '[PLACEHOLDER] $0.000' },
-        { medio: 'Bus / alimentador',         lunSab: '[PLACEHOLDER] $0.000', domFest: '[PLACEHOLDER] $0.000' },
-        { medio: 'Taxi (banderazo)',          lunSab: '[PLACEHOLDER] $0.000', domFest: '[PLACEHOLDER] $0.000' },
-        { medio: 'Apps de transporte',        lunSab: '[PLACEHOLDER] Tarifa variable', domFest: '[PLACEHOLDER] Tarifa variable' }
+        { medio: 'Metro (líneas A y B)',                     lunSab: '$3.820 con Cívica · $4.400 al portador', domFest: '$3.820 con Cívica · $4.400 al portador' },
+        { medio: 'Metrocable (integrado)',                   lunSab: 'Incluido en el pasaje del Metro',        domFest: 'Incluido en el pasaje del Metro' },
+        { medio: 'Metrocable turístico (línea L, Arví)',     lunSab: '$24.500',                                domFest: '$24.500' },
+        { medio: 'Bus integrado (Metro + bus, Medellín)',    lunSab: '$4.715',                                 domFest: '$4.715' },
+        { medio: 'Taxi (banderazo)',                         lunSab: '$5.900 · carrera mínima $8.300',         domFest: '$5.900 · carrera mínima $8.300' },
+        { medio: 'Apps de transporte',                       lunSab: 'Tarifa variable',                        domFest: 'Tarifa variable' }
       ]
     }
   },
@@ -684,9 +684,9 @@ window.CONTENT = {
       {
         tipo: 'comite',
         titulo: 'Comité de emergencias',
-        detalle: '[PLACEHOLDER] Disponible 24 horas durante el evento',
-        telefono: '[PLACEHOLDER] +57 300 000 0000',
-        tel: '+573000000000',
+        detalle: 'Ana Isabel Angarita · Logística Interna. Disponible 24 horas durante el evento.',
+        telefono: '+57 322 527 0106',
+        tel: '+573225270106',
         boton: 'Llamar al comité'
       },
       {
@@ -699,12 +699,20 @@ window.CONTENT = {
       },
       {
         tipo: 'clinica',
-        titulo: '[PLACEHOLDER] Clínica de referencia',
-        detalle: '[PLACEHOLDER] Centro médico más cercano a la sede. Dirección por confirmar.',
-        telefono: '[PLACEHOLDER] +57 604 000 0000',
-        tel: '+576040000000',
+        titulo: 'Clínica de referencia · Día 1',
+        detalle: 'Hospital Alma Máter de Antioquia (sede principal) · Calle 69 #51C-24, Medellín. Línea institucional 24/7 (UdeA): (604) 219 8444. Citas: (604) 322 3633, opción 1.',
+        telefono: '(604) 219 8444',
+        tel: '+576042198444',
+        boton: 'Llamar al hospital'
+      },
+      {
+        tipo: 'clinica',
+        titulo: 'Clínica de referencia · Días 2 y 3',
+        detalle: 'ESE Hospital San Vicente de Paúl · Barbosa, cerca de El Yarumito.',
+        telefono: '(604) 520 2430',
+        tel: '+576045202430',
         boton: 'Ver en el mapa',
-        mapa: 'https://www.google.com/maps/search/?api=1&query=clinica+Medellin'
+        mapa: 'https://maps.app.goo.gl/MrQapUKLnmFiXrrt7'
       }
     ],
 
