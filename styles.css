@@ -876,10 +876,22 @@ table{border-collapse:collapse;width:100%}
   transition:transform .18s ease,box-shadow .18s ease;
 }
 .person:hover{transform:translateY(-3px);box-shadow:var(--sombra-fuerte)}
-.person__foto{width:62px;height:62px;flex:none}
-.person__foto .media{--ar:1;width:62px;height:62px;border-radius:50%}
-.person__foto .media.is-missing::after{font-size:0}
-.person__foto .media.is-missing{box-shadow:inset 0 0 0 2px var(--c,var(--fucsia))}
+.person__foto{position:relative;width:62px;height:62px;flex:none}
+/* Iniciales de respaldo: visibles mientras no haya foto real. */
+.person__foto::before{
+  content:attr(data-iniciales);
+  position:absolute;inset:0;z-index:0;display:grid;place-content:center;
+  border-radius:50%;background:var(--c,var(--fucsia));
+  font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:.02em;
+  color:#fff;
+}
+.person__foto .media{position:relative;z-index:1;--ar:1;width:62px;height:62px;border-radius:50%}
+/* Cuando la foto no existe, el .media se vuelve transparente y deja ver las iniciales. */
+.person__foto .media.is-missing{background:transparent;box-shadow:inset 0 0 0 2px var(--c,var(--fucsia))}
+.person__foto .media.is-missing::after{display:none}
+/* Colores claros: iniciales en morado oscuro para que contrasten. */
+.person[style*="amarillo"] .person__foto::before,
+.person[style*="cielo"] .person__foto::before{color:var(--morado-profundo)}
 .person__info{flex:1;min-width:0}
 .person__nombre{display:block;font-family:var(--font-display);font-weight:800;font-size:17px;color:var(--morado-profundo);line-height:1.2}
 .person__rol{display:block;font-size:13px;font-weight:700;color:var(--c,var(--fucsia));margin:1px 0 3px}

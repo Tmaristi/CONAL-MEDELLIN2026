@@ -37,7 +37,7 @@ window.CONTENT = {
     inicio: '2026-11-21T07:00:00-05:00',
 
     // [PLACEHOLDER] número del comité organizador (formato internacional, sin signos).
-    whatsapp: '573000000000',
+    whatsapp: '573015109001',
     whatsappMensaje: 'Hola, comité CONAL 2026. Tengo una pregunta sobre el evento.',
 
     logo: './assets/logos/logo-conal.jpeg',
@@ -270,22 +270,22 @@ window.CONTENT = {
       {
         etiqueta: 'DÍA 1',
         color: 'fucsia',
-        nombre: '[PLACEHOLDER] Sede principal · Medellín',
-        descripcion: '[PLACEHOLDER] Aquí ocurren el registro, el acto de apertura y la jornada académica del primer día.',
-        comoLlegar: '[PLACEHOLDER] Estación de Metro más cercana por confirmar. También llegan rutas de bus y servicios de transporte por aplicación.',
-        direccion: '[PLACEHOLDER] Dirección por confirmar · Medellín',
+        nombre: 'Sede principal · Universidad de Antioquia',
+        descripcion: 'Aquí ocurren el registro, el acto de apertura y la jornada académica del primer día.',
+        comoLlegar: 'Estación de Metro más cercana: Universidad. También llegan rutas de bus y servicios de transporte por aplicación.',
+        direccion: 'Calle 67 N.º 53-108 (Ciudad Universitaria) · Medellín',
         foto: './assets/sedes/sede-1.jpg',
-        mapa: 'https://www.google.com/maps/search/?api=1&query=Medellin'
+        mapa: 'https://maps.app.goo.gl/qjiGXp1io8smq7Zu9'
       },
       {
         etiqueta: 'DÍAS 2 Y 3',
         color: 'morado',
-        nombre: '[PLACEHOLDER] Finca / Sede campestre',
-        descripcion: '[PLACEHOLDER] Sede del segundo y tercer día: ponencias, integración, alimentación y alojamiento.',
-        comoLlegar: '[PLACEHOLDER] El traslado se hace únicamente en el transporte oficial del evento. Revisa la sección de Transporte.',
-        direccion: '[PLACEHOLDER] Vía por confirmar · Área metropolitana',
+        nombre: 'Centro recreacional · Yarumito',
+        descripcion: 'Sede del segundo y tercer día: ponencias, integración, alimentación y alojamiento.',
+        comoLlegar: 'El traslado se hace únicamente en el transporte oficial del evento. Revisa la sección de Transporte.',
+        direccion: 'Yarumito Finca Hotel, Vereda El Guayabo, Barbosa, Antioquia.',
         foto: './assets/sedes/sede-2.jpg',
-        mapa: 'https://www.google.com/maps/search/?api=1&query=Medellin'
+        mapa: 'https://maps.app.goo.gl/Utzdk1sct4MNT65H8'
       }
     ],
 
@@ -750,12 +750,14 @@ window.CONTENT = {
     subtitulo: 'Guarda estos números antes del primer día.',
 
     lista: [
-      { nombre: '[PLACEHOLDER] Nombre Apellido', rol: '[PLACEHOLDER] Dirección general',        telefono: '[PLACEHOLDER] +57 300 000 0000', tel: '+573000000000', foto: './assets/comite/contacto-1.jpg', color: 'fucsia' },
-      { nombre: '[PLACEHOLDER] Nombre Apellido', rol: '[PLACEHOLDER] Logística y transporte',   telefono: '[PLACEHOLDER] +57 300 000 0000', tel: '+573000000000', foto: './assets/comite/contacto-2.jpg', color: 'morado' },
-      { nombre: '[PLACEHOLDER] Nombre Apellido', rol: '[PLACEHOLDER] Académico',                telefono: '[PLACEHOLDER] +57 300 000 0000', tel: '+573000000000', foto: './assets/comite/contacto-3.jpg', color: 'amarillo' },
-      { nombre: '[PLACEHOLDER] Nombre Apellido', rol: '[PLACEHOLDER] Bienestar y salud',        telefono: '[PLACEHOLDER] +57 300 000 0000', tel: '+573000000000', foto: './assets/comite/contacto-4.jpg', color: 'azul' },
-      { nombre: '[PLACEHOLDER] Nombre Apellido', rol: '[PLACEHOLDER] Comunicaciones',           telefono: '[PLACEHOLDER] +57 300 000 0000', tel: '+573000000000', foto: './assets/comite/contacto-5.jpg', color: 'naranja' },
-      { nombre: '[PLACEHOLDER] Nombre Apellido', rol: '[PLACEHOLDER] Alojamiento',              telefono: '[PLACEHOLDER] +57 300 000 0000', tel: '+573000000000', foto: './assets/comite/contacto-6.jpg', color: 'verde' }
+      { nombre: 'María Isabel Cañas Duque',      rol: 'Coordinadora General',             telefono: '+57 302 406 4959', tel: '+573024064959', foto: './assets/comite/contacto-1.jpg', color: 'fucsia' },
+      { nombre: 'Paola Andrea Cañizares Garcés',  rol: 'Coordinadora General',             telefono: '+57 301 510 9001', tel: '+573015109001', foto: './assets/comite/contacto-2.jpg', color: 'morado' },
+      { nombre: 'Susana Roldán Restrepo',         rol: 'Coordinadora Académico',           telefono: '+57 300 614 8677', tel: '+573006148677', foto: './assets/comite/contacto-3.jpg', color: 'amarillo' },
+      { nombre: 'María Antonia Bolívar Sierra',   rol: 'Coordinadora Publicidad',          telefono: '+57 314 718 9965', tel: '+573147189965', foto: './assets/comite/contacto-4.jpg', color: 'azul' },
+      { nombre: 'Ana Isabel Angarita Escobar',    rol: 'Coordinadora Logística Interna',   telefono: '+57 322 527 0106', tel: '+573225270106', foto: './assets/comite/contacto-5.jpg', color: 'naranja' },
+      { nombre: 'Andrés García Arboleda',         rol: 'Coordinador Logística Externa',    telefono: '+57 301 717 6882', tel: '+573017176882', foto: './assets/comite/contacto-6.jpg', color: 'verde' },
+      { nombre: 'Juliana Agudelo Cuervo',         rol: 'Coordinadora Finanzas',            telefono: '+57 315 633 4193', tel: '+573156334193', foto: './assets/comite/contacto-7.jpg', color: 'cielo' },
+      { nombre: 'Santiago Gómez Berrio',          rol: 'Coordinador Mercadeo',             telefono: '+57 300 454 9923', tel: '+573004549923', foto: './assets/comite/contacto-8.jpg', color: 'fucsia' }
     ],
 
     whatsapp: {

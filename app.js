@@ -787,11 +787,19 @@
 
   /* ═══════════════════════════ 10 · CONTACTOS ═══════════════════════════ */
 
+  function iniciales(nombre) {
+    var n = txt(nombre).trim().split(/\s+/).filter(Boolean);
+    if (!n.length) return '';
+    var primera = n[0].charAt(0);
+    var segunda = n.length > 1 ? n[1].charAt(0) : '';
+    return (primera + segunda).toUpperCase();
+  }
+
   function renderContactos() {
     var c = C.contactos;
     var gente = '<div class="people">' + c.lista.map(function (p) {
       return '<article class="person reveal" style="--c:var(--' + p.color + ')">' +
-        '<div class="person__foto">' + media(p.foto, { ar: '1', color: p.color, alt: txt(p.nombre) }) + '</div>' +
+        '<div class="person__foto" data-iniciales="' + esc(iniciales(p.nombre)) + '">' + media(p.foto, { ar: '1', color: p.color, alt: txt(p.nombre) }) + '</div>' +
         '<div class="person__info">' +
           '<span class="person__nombre">' + ph(p.nombre) + '</span>' +
           '<span class="person__rol">' + ph(p.rol) + '</span>' +
