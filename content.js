@@ -778,16 +778,16 @@ window.CONTENT = {
     foto: './assets/fotos/faq.jpg',
 
     items: [
-      { p: '¿Qué incluye la inscripción al CONAL 2026?',          r: '[PLACEHOLDER] Por definir: alimentación, alojamiento, transporte entre sedes, material del evento y actividades académicas. El detalle exacto lo publica el comité organizador.' },
-      { p: '¿A qué hora debo llegar el primer día?',               r: '[PLACEHOLDER] La hora de registro está por confirmar. Te recomendamos llegar con tiempo: el acto de apertura empieza puntual.' },
-      { p: '¿Puedo llegar directamente a la sede campestre?',      r: '[PLACEHOLDER] No. El ingreso es con el transporte oficial desde el punto de encuentro, por control de asistencia y seguridad.' },
-      { p: '¿Hay alojamiento incluido?',                           r: '[PLACEHOLDER] Por confirmar. Si tienes una necesidad particular de alojamiento, escríbele a la coordinación de logística con anticipación.' },
-      { p: 'Tengo una restricción alimentaria, ¿qué hago?',        r: '[PLACEHOLDER] Repórtala al inscribirte y recuérdasela al comité de bienestar apenas llegues. Se gestiona, pero necesita aviso previo.' },
-      { p: '¿Qué pasa si pierdo mi escarapela?',                   r: '[PLACEHOLDER] Avisa de inmediato en el punto de registro. La reposición tiene una multa simbólica y puede tardar.' },
-      { p: '¿Puedo invitar a alguien que no esté inscrito?',       r: '[PLACEHOLDER] No. El ingreso a las sedes y al transporte es exclusivo para personas inscritas y acreditadas.' },
-      { p: '¿Hay wifi en las sedes?',                              r: '[PLACEHOLDER] Por confirmar. En la sede campestre la señal puede ser limitada: descarga lo que necesites antes de salir.' },
-      { p: '¿Cómo me devuelvo el último día?',                     r: '[PLACEHOLDER] El transporte oficial regresa a Medellín en el horario publicado en la sección de Transporte. Si tienes vuelo o bus ese mismo día, cuadra tus tiempos con holgura.' },
-      { p: '¿A quién le escribo si algo no me queda claro?',       r: 'A tu coordinación o al comité organizador por WhatsApp. Los números están en la sección de Contactos.' }
+      { p: '¿Qué incluye la inscripción al CONAL 2026?',          r: 'Hospedaje por dos noches en el Centro Recreacional El Yarumito (Barbosa), 6 comidas principales y 5 refrigerios, transporte de ida y regreso entre Medellín y Barbosa, kit de bienvenida con un recordatorio paisa, zona de hidratación y acceso a todas las zonas del lugar de hospedaje. El almuerzo del sábado 21 es libre. El corte Hortensia (externos) incluye solo la jornada académica del Día 1, con kit y 1 refrigerio de ese día.' },
+      { p: '¿A qué hora debo llegar el primer día?',               r: 'A las 7:00 a. m. del sábado 21 de noviembre al Auditorio Álvaro de Jesús Pérez Roldán, en la Universidad de Antioquia, para la acreditación y la entrega de kits. Ten a mano tu código QR y tu documento de identidad.' },
+      { p: '¿Puedo llegar directamente a la sede campestre?',      r: 'No. Todos los asistentes salen juntos desde la Universidad de Antioquia en el transporte oficial, el sábado a las 5:40 p. m. Si tienes un caso especial, consúltalo antes del evento con Logística Externa.' },
+      { p: '¿Hay alojamiento incluido?',                           r: 'Sí. Te alojas las noches del 21 y el 22 de noviembre en El Yarumito, en cabañas con nombres de flores. Quienes compraron el corte Boca de dragón se alojan en la zona de carpas. La asignación se confirma días antes del evento. Lleva toalla y tus artículos de aseo.' },
+      { p: 'Tengo una restricción alimentaria, ¿qué hago?',        r: 'Indícala en el formulario de inscripción y escríbele a Logística Interna antes del evento para coordinarlo con la sede: Ana Isabel Angarita, 322 527 0106.' },
+      { p: '¿Qué pasa si pierdo mi escarapela?',                   r: 'Repórtalo de inmediato a cualquier integrante del comité o del staff. La escarapela es necesaria para acreditarte en cada jornada, así que el comité te ayudará a reponerla o a validar tu identidad con tu documento.' },
+      { p: '¿Puedo invitar a alguien que no esté inscrito?',       r: 'No. El hospedaje y las actividades de los días 2 y 3 son de uso exclusivo para los ANEIAPos y delegados inscritos. En el Día 1, las personas externas solo pueden asistir con el corte Hortensia.' },
+      { p: '¿Hay wifi en las sedes?',                              r: 'Sí. El Yarumito tiene wifi en las habitaciones, las zonas comunes y el salón múltiple. Lleva tu cargador y, si puedes, una batería externa.' },
+      { p: '¿Cómo me devuelvo el último día?',                     r: 'En el transporte oficial. El lunes 23 los buses salen de El Yarumito a las 6:00 p. m. y llegan a Medellín hacia las 8:00 p. m. Si tienes vuelo o bus de regreso ese día, cómpralo para después de las 9:00 p. m. o para el martes.' },
+      { p: '¿A quién le escribo si algo no me queda claro?',       r: 'Puedes contactar directamente a las coordinadoras generales: María Isabel Cañas, 302 406 4959; Paola Cañizares, 301 510 9001. Todos los contactos del comité están en la sección de Contactos.' }
     ]
   },
 
