@@ -36,7 +36,7 @@ window.CONTENT = {
     // Es la apertura de la acreditación del Día 1.
     inicio: '2026-11-21T07:00:00-05:00',
 
-    // [PLACEHOLDER] número del comité organizador (formato internacional, sin signos).
+    // Número del comité para el botón de WhatsApp (formato internacional, sin signos).
     whatsapp: '573015109001',
     whatsappMensaje: 'Hola, comité CONAL 2026. Tengo una pregunta sobre el evento.',
 
@@ -565,9 +565,9 @@ window.CONTENT = {
         titulo: 'Ropa',
         color: 'morado',
         items: [
-          { id: 'ropa-formal',    texto: '[PLACEHOLDER] Atuendo para la jornada académica' },
-          { id: 'ropa-comoda',    texto: '[PLACEHOLDER] Ropa cómoda para integración' },
-          { id: 'ropa-fiesta',    texto: '[PLACEHOLDER] Atuendo para la noche temática' },
+          { id: 'ropa-formal',    texto: 'Camiseta capitular para la jornada académica (Día 1)' },
+          { id: 'ropa-comoda',    texto: 'Camiseta blanca para el Día 2 y ropa deportiva para el Desafío (Día 3)' },
+          { id: 'ropa-fiesta',    texto: 'Atuendo decembrino (noche 1) y de gala con toques florales (noche 2)' },
           { id: 'zapatos',        texto: 'Zapatos cómodos para caminar' },
           { id: 'chaqueta',       texto: 'Chaqueta o buzo (en Medellín refresca de noche)' }
         ]
@@ -587,7 +587,7 @@ window.CONTENT = {
         titulo: 'Para la sede campestre',
         color: 'cielo',
         items: [
-          { id: 'traje-bano',     texto: '[PLACEHOLDER] Vestido de baño (si aplica)' },
+          { id: 'traje-bano',     texto: 'Vestido de baño y chanclas para la piscina (Día 3)' },
           { id: 'toalla',         texto: 'Toalla' },
           { id: 'botella',        texto: 'Botella de agua reutilizable' },
           { id: 'bolsa-ropa',     texto: 'Bolsa para la ropa sucia o mojada' }
@@ -610,53 +610,59 @@ window.CONTENT = {
         id: 'vest-dia-1',
         tab: 'Día 1',
         color: 'fucsia',
-        titulo: '[PLACEHOLDER] Académico',
-        descripcion: '[PLACEHOLDER] Jornada de apertura y ponencias: presentación formal, cómoda para estar sentado varias horas.',
+        titulo: 'Jornada académica',
+        descripcion: 'Sábado 21 en la Universidad de Antioquia. De día, camiseta capitular y cómodo para caminar el campus. 🎄 En la noche (Integración 1: Simulacro decembrino) adelantamos la Navidad: ven con colores de diciembre (rojo, verde, dorado o blanco), suéter navideño, gorro de Papá Noel, luces, escarcha o cualquier detalle de alumbrado paisa. Entre más decembrino, mejor.',
         foto: './assets/vestimenta/dia-1.jpg',
         si: [
-          '[PLACEHOLDER] Camisa o blusa de vestir',
-          '[PLACEHOLDER] Pantalón formal o falda',
-          '[PLACEHOLDER] Zapato cerrado',
-          '[PLACEHOLDER] Chaqueta o blazer'
+          'Camiseta capitular',
+          'Jean sin rotos o pantalón largo',
+          'Zapatos cerrados y cómodos (caminarás por el campus)',
+          'Chaqueta ligera para el auditorio y el viaje'
         ],
         no: [
-          '[PLACEHOLDER] Sudadera o pantaloneta',
-          '[PLACEHOLDER] Gorra dentro del auditorio',
-          '[PLACEHOLDER] Sandalias'
+          'Jeans rotos, shorts, bermudas o faldas cortas',
+          'Chanclas, sandalias o crocs',
+          'Gorras y gafas de sol dentro del auditorio'
         ]
       },
       {
         id: 'vest-dia-2',
         tab: 'Día 2',
         color: 'morado',
-        titulo: '[PLACEHOLDER] Integración',
-        descripcion: '[PLACEHOLDER] Día de sede campestre: ropa fresca que te deje moverte, y un cambio para la noche temática.',
+        titulo: 'Liderazgo estratégico',
+        descripcion: 'Domingo 22 en El Yarumito. De día, camiseta blanca. 🌸 En la noche (Gala: Met Gala “Jardín de flores”) celebramos los 34 años de ANEIAP: ven de gala y hazle honor a la tierra de las flores con estampados florales, flores en el cabello o los accesorios y colores de orquídea, girasol, heliconia o agapanto. Calzado formal, pero evita tacones muy delgados (el terreno es campestre). Atrévete: es Met Gala.',
         foto: './assets/vestimenta/dia-2.jpg',
         si: [
-          '[PLACEHOLDER] Camiseta fresca',
-          '[PLACEHOLDER] Jean o pantalón cómodo',
-          '[PLACEHOLDER] Tenis',
-          '[PLACEHOLDER] Atuendo de la noche temática'
+          'Camiseta blanca',
+          'Jean sin rotos o pantalón largo',
+          'Zapatos cerrados',
+          'Para la gala: atuendo elegante con toques florales y calzado formal'
         ],
         no: [
-          '[PLACEHOLDER] Ropa que no quieras ensuciar',
-          '[PLACEHOLDER] Tacones en zonas verdes'
+          'Camisetas de otro color, con estampados grandes o esqueletos',
+          'Jeans rotos, shorts o bermudas',
+          'Chanclas o sandalias',
+          'En la gala: ropa deportiva, jean o tenis'
         ]
       },
       {
         id: 'vest-dia-3',
         tab: 'Día 3',
         color: 'amarillo',
-        titulo: '[PLACEHOLDER] Cierre',
-        descripcion: '[PLACEHOLDER] Clausura y regreso: algo presentable para las fotos de cierre y cómodo para el viaje.',
+        titulo: 'Desafío ANEIAP',
+        descripcion: 'Lunes 23 en El Yarumito. Día para moverte, ensuciarte y mojarte: ropa deportiva y cómoda. Lleva vestido de baño y chanclas solo para la piscina, y algo cómodo para el viaje de regreso.',
         foto: './assets/vestimenta/dia-3.jpg',
         si: [
-          '[PLACEHOLDER] Camiseta institucional ANEIAP',
-          '[PLACEHOLDER] Jean o pantalón cómodo',
-          '[PLACEHOLDER] Zapato cómodo para el regreso'
+          'Ropa deportiva y cómoda',
+          'Sudadera o licra',
+          'Zapatos cerrados (tenis con buen agarre)',
+          'Vestido de baño y chanclas solo para la piscina',
+          'Ropa cómoda para el viaje de regreso'
         ],
         no: [
-          '[PLACEHOLDER] Ropa de la noche anterior'
+          'Jean o ropa formal (te vas a mover, ensuciar o mojar)',
+          'Sandalias o chanclas durante el Desafío',
+          'Ropa de calle dentro de la piscina'
         ]
       }
     ],
@@ -807,7 +813,7 @@ window.CONTENT = {
   playlist: {
     titulo: 'Playlist oficial',
     embedUrl: 'https://open.spotify.com/embed/playlist/4O153fMjWRr5GwLyxUwF1A',
-    vacio: '[PLACEHOLDER] Pega aquí el enlace del embed de Spotify en content.js → playlist.embedUrl'
+    vacio: 'La playlist oficial estará disponible muy pronto.'
   },
 
   /* ─────────────────────────────────────────────────────────────────────────
