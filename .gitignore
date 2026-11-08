@@ -1,0 +1,8 @@
+# Material de trabajo interno: capturas de referencia, planeación y scripts.
+# No debe publicarse en GitHub Pages. Si quieres conservarlo en el repo,
+# borra la línea de abajo.
+referencias/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
