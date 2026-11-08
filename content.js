@@ -228,7 +228,8 @@ window.CONTENT = {
           { inicio: '13:00', fin: '14:00', actividad: 'Almuerzo 2', tipo: 'comida' },
           { inicio: '14:00', fin: '14:30', actividad: 'Acreditación', tipo: 'acreditacion' },
           { inicio: '14:30', fin: '16:00', actividad: 'Taller 2 - Alto rendimiento sin agotamiento', tipo: 'academico' },
-          { inicio: '16:00', fin: '17:00', actividad: 'Conversatorio 1 - El talento que liderará la industria 4.0', tipo: 'academico' },
+          { inicio: '16:00', fin: '16:30', actividad: 'Presentación por regiones', tipo: 'academico' },
+          { inicio: '16:30', fin: '17:00', actividad: 'Feria de emprendimiento', tipo: 'mercadeo' },
           { inicio: '17:00', fin: '17:30', actividad: 'Refrigerio 4', tipo: 'comida' },
           { inicio: '17:30', fin: '19:30', actividad: 'Preparación para la gala', tipo: 'integracion' },
           { inicio: '19:30', fin: '20:00', actividad: 'Acreditación', tipo: 'acreditacion' },
@@ -373,8 +374,8 @@ window.CONTENT = {
         cuando: 'Tarde · 1:00 p. m.',
         hora: '1:00 p. m.',
         descripcion: 'Castillo de estilo gótico de 1930 en El Poblado, con colecciones de arte decorativo europeo y jardines de inspiración francesa. Uno de los espacios patrimoniales más fotogénicos de la ciudad.',
-        valor: '$27.000 por persona',
-        valorCorto: '$27.000',
+        valor: '$30.000 por persona',
+        valorCorto: '$30.000',
         cupos: '25',
         lugar: 'Calle 9 Sur # 32-269, El Poblado, Medellín',
         duracion: '2 horas (recorrido guiado y jardines)',
@@ -426,13 +427,13 @@ window.CONTENT = {
         fechaCorta: 'Vie 20 nov',
         fechaLarga: 'Viernes 20 de noviembre',
         nombre: 'Planchón en Guatapé',
-        cuando: 'Salida 10:00 a. m. · Regreso 5:00 p. m.',
-        hora: '10:00 a. m. – 5:00 p. m.',
+        cuando: 'Salida 10:30 a. m. · Regreso 6:00 p. m.',
+        hora: '10:30 a. m. – 6:00 p. m.',
         descripcion: 'Paseo en planchón por el embalse de Guatapé–El Peñol, uno de los paisajes más representativos de Antioquia, con música e integración a bordo.',
-        valor: '$110.000 por persona',
-        valorCorto: '$110.000',
-        cupos: '40',
-        horario: 'Salida de Medellín a las 10:00 a. m. y regreso a las 5:00 p. m.',
+        valor: '$120.000 por persona',
+        valorCorto: '$120.000',
+        cupos: '50',
+        horario: 'Salida de Medellín a las 10:30 a. m. y regreso a las 6:00 p. m.',
         incluye: 'Transporte ida y vuelta hacia Medellín. Trayecto en el planchón y bebidas.',
         puntoEncuentro: { texto: 'Por confirmar', porConfirmar: true },   // POR CONFIRMAR
         recomendaciones: 'Documento de identidad, bloqueador, gorra, vestido de baño y ropa de cambio, efectivo para alimentación y snacks.',
@@ -465,9 +466,8 @@ window.CONTENT = {
         cuando: 'Todo el día · Después del evento',
         hora: 'Todo el día',
         descripcion: 'Día completo en el corregimiento de Santa Elena para conocer la tradición silletera, patrimonio cultural de Antioquia e inspiración de la identidad de CONAL Medellín 2026: fincas de flores, historia de las silletas y cultura campesina.',
-        // POR CONFIRMAR: el resumen del documento da ambas cifras y la ficha detallada solo la primera.
-        valor: { texto: 'Aprox. $110.000 con transporte / $40.000 sin transporte', porConfirmar: true },
-        valorCorto: { texto: '$110.000 / $40.000', porConfirmar: true },
+        valor: '$120.000 con transporte',
+        valorCorto: '$120.000',
         cupos: '10 personas en adelante',
         horario: { texto: 'Todo el día (hora de salida y regreso por confirmar)', porConfirmar: true },   // POR CONFIRMAR
         incluye: 'Recorrido guiado por los cultivos de flores, acceso a zonas comunes, charla y armado de silleta. Transporte ida y vuelta.',
@@ -730,12 +730,13 @@ window.CONTENT = {
     subtitulo: 'Son simbólicas y en buena onda: lo recaudado se destina a la actividad de cierre.',
 
     lista: [
-      { concepto: '[PLACEHOLDER] Llegar tarde a una actividad',        valor: '[PLACEHOLDER] $0.000' },
-      { concepto: '[PLACEHOLDER] Dejar el celular sonando en ponencia', valor: '[PLACEHOLDER] $0.000' },
-      { concepto: '[PLACEHOLDER] Perder la escarapela',                valor: '[PLACEHOLDER] $0.000' },
-      { concepto: '[PLACEHOLDER] No cumplir el código de vestimenta',   valor: '[PLACEHOLDER] $0.000' },
-      { concepto: '[PLACEHOLDER] Hacer esperar al bus',                valor: '[PLACEHOLDER] $0.000' },
-      { concepto: '[PLACEHOLDER] Quedarse dormido en la jornada',      valor: '[PLACEHOLDER] $0.000' }
+      { concepto: 'Minuto tardío',                                                                  valor: '$700/min' },
+      { concepto: 'No acreditación y reclamación extemporánea de kit de bienvenida el primer día del evento', valor: '$1.000/min' },
+      { concepto: 'Inasistencia injustificada a visita industrial',                                   valor: '$40.000' },
+      { concepto: 'Inasistencia injustificada a espacio/actividad',                                   valor: '$55.000' },
+      { concepto: 'Hacer uso de las zonas alternas fuera de los horarios permitidos',                 valor: '$165.000' },
+      { concepto: 'Estar fuera de las instalaciones después del horario permitido',                   valor: '$175.000' },
+      { concepto: 'Incumplir el código de vestimenta',                                                valor: '$60.000' }
     ],
 
     nota: {
