@@ -859,7 +859,7 @@
 
     var p = C.footer;
     $('.pie').innerHTML = '<div class="pie__in">' +
-      '<div class="pie__logos"><span class="ph-logo" data-pie-logo></span><span class="ph-logo" data-pie-aneiap></span></div>' +
+      '<div class="pie__logos"><span class="ph-logo" data-pie-logo></span></div>' +
       '<span class="pie__nombre">' + esc(p.nombre) + '</span>' +
       '<span class="pie__lema">' + esc(p.lema) + '</span>' +
       '<p>' + ph(p.texto) + '</p>' +
@@ -867,7 +867,6 @@
       '<p class="pie__credito">' + esc(p.credito) + '</p></div>';
 
     ponerLogo($('[data-pie-logo]'), C.meta.logo, C.meta.logoAlt, LOGO_W, LOGO_H);
-    ponerLogo($('[data-pie-aneiap]'), C.meta.logoAneiap, 'ANEIAP');
   }
 
   /* ═══════════════════════════ PLAYLIST ═══════════════════════════ */

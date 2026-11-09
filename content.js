@@ -44,7 +44,6 @@ window.CONTENT = {
     logoAlt: 'CONAL 2026 · El camino del silletero · Medellín',
     // Imagen del lema "Sembrando ideas, cosechando impacto" (va debajo del logo en el inicio).
     lemaImg: './assets/logos/texto-conal.jpeg',
-    logoAneiap: './assets/logos/logo-aneiap.png',
 
     /* Decoraciones del logo (PNG transparentes) que adornan los títulos de sección.
        "forma" decide dónde se ubican; "color" sirve para no ponerlas sobre un fondo
@@ -222,7 +221,7 @@ window.CONTENT = {
           { inicio: '11:30', fin: '13:00', actividad: 'Espacio JDN-IN-GNP', tipo: 'academico' },
           { inicio: '13:00', fin: '14:00', actividad: 'Almuerzo 2', tipo: 'comida' },
           { inicio: '14:00', fin: '14:30', actividad: 'Acreditación', tipo: 'acreditacion' },
-          { inicio: '14:30', fin: '16:00', actividad: 'Taller 2 - Alto rendimiento sin agotamiento', tipo: 'academico' },
+          { inicio: '14:30', fin: '16:00', actividad: 'Conversatorio 1 - El talento que liderará la industria 4.0', tipo: 'academico' },
           { inicio: '16:00', fin: '16:30', actividad: 'Presentación por regiones', tipo: 'academico' },
           { inicio: '16:30', fin: '17:00', actividad: 'Feria de emprendimiento', tipo: 'mercadeo' },
           { inicio: '17:00', fin: '17:30', actividad: 'Refrigerio 4', tipo: 'comida' },
