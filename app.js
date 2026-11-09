@@ -43,6 +43,33 @@
     return esc(s);
   }
 
+  /**
+   * Texto con formato ligero para descripciones. Primero escapa el HTML (seguro),
+   * luego aplica marcadores tipo markdown y separa párrafos:
+   *   *_texto_*  → negrilla + cursiva
+   *   *texto*    → negrilla
+   *   línea en blanco (doble salto) → nuevo párrafo
+   * Devuelve uno o varios <p> (con la clase opcional). Si el texto es
+   * [PLACEHOLDER], los párrafos llevan además la clase "ph" (subrayado punteado).
+   */
+  function formato(s, clase) {
+    s = String(s == null ? '' : s);
+    var ph0 = s.indexOf(PH_TOKEN) === 0;
+    if (ph0) s = s.slice(PH_TOKEN.length).trim();
+
+    var cls = [clase, ph0 ? 'ph' : ''].filter(Boolean).join(' ');
+    var attr = cls ? ' class="' + cls + '"' : '';
+
+    var parrafos = s.split(/\n\s*\n/).map(function (bloque) {
+      var html = esc(bloque.trim())
+        .replace(/\*_([^*]+?)_\*/g, '<strong><em>$1</em></strong>')
+        .replace(/\*([^*]+?)\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>');
+      return '<p' + attr + '>' + html + '</p>';
+    });
+    return parrafos.join('');
+  }
+
   function icon(name, cls) {
     return '<svg class="' + (cls || 'ic') + '" aria-hidden="true"><use href="#ic-' + name + '"/></svg>';
   }
@@ -509,7 +536,7 @@
     var banner = dest ? '<article class="banner reveal" id="plan-' + esc(dest.id) + '" data-fecha="' + esc(dest.fecha) + '">' +
       '<span class="banner__tag">' + esc(p.etiquetaDestacado) + ' · ' + esc(dest.fechaLarga) + '</span>' +
       '<h3>' + ph(dest.nombre) + '</h3>' +
-      '<p>' + ph(dest.descripcion) + '</p>' +
+      formato(dest.descripcion) +
       chips(dest) +
       '<dl class="pdets pdets--banner">' + detalles(dest) + '</dl>' +
       accion(dest) + '</article>' : '';
@@ -535,7 +562,7 @@
         '<span class="plan__fecha">' + esc(it.fechaLarga) + '</span>' +
         '<h4>' + ph(it.nombre) + '</h4>' +
         chips(it) +
-        '<p class="plan__desc">' + ph(it.descripcion) + '</p>' +
+        formato(it.descripcion, 'plan__desc') +
         '<div class="plan__det" id="' + idDet + '"><div><dl class="pdets">' + detalles(it) + '</dl></div></div>' +
         '<div class="plan__pie">' +
           '<button class="plan__mas" type="button" aria-expanded="false" aria-controls="' + idDet + '"' +

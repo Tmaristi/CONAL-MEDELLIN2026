@@ -459,7 +459,7 @@ window.CONTENT = {
         nombre: 'Pre-evento CONAL',
         cuando: 'Noche · A partir de las 10 p. m.',
         hora: 'Desde las 10 p. m.',
-        descripcion: 'Encuentro de bienvenida la noche antes de la convención. Las primeras 5 personas que compren su cupo en cada corte participan en un sorteo de 3 entradas gratis.',
+        descripcion: 'Esta vez queremos que *cada capítulo represente a un artista que lleve el nombre de Medellín* y su música a todas partes.\n\nLa idea es que se apropien de su esencia a través del vestuario, los accesorios y, sobre todo, ¡la actitud! No necesitan disfrazarse, simplemente deben llevar el flow de su artista.\n\nDress code: *_Vístete como el flow de tu artista_* 👟🖤',
         valor: 'Depende de la etapa de compra de boleta',
         valorCorto: 'Según etapa de boleta',
         cupos: '200',

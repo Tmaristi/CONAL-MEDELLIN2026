@@ -1,97 +1,164 @@
-# CONAL 2026 · Guía del Asistente
+# CONAL 2026 · Guía del Asistente — Contexto técnico
 
-Guía web del asistente para **CONAL 2026 – El Camino del Silletero · Medellín**, evento de ANEIAP.
-Lema: **"Sembrando ideas, cosechando impacto"**.
-Fechas: **21, 22 y 23 de noviembre de 2026** (zona horaria America/Bogota).
-Idioma de la página: español de Colombia, trato de "tú".
+Contexto para agentes de IA y desarrolladores que retomen el proyecto. Describe
+el estado **final** de la guía (proyecto completo y publicado), su arquitectura,
+las reglas técnicas y la identidad de marca.
 
 ## Qué es este proyecto
-Una guía móvil del asistente (mobile-first), de una sola página con anclas, con la misma arquitectura de información que la referencia `https://guia-asistente-snc-baq-2026.vercel.app/` pero con la identidad visual de CONAL. De la referencia se copia la **estructura y los patrones de interacción**. No se copian sus colores, textos, imágenes ni identidad.
 
-Todo el contenido vive en un solo archivo (`content.js`). Ya son datos reales: **cronograma**, **planes externos** y **logo** (Actualización 1). El resto (sedes, transporte, tarifas, contactos, etc.) sigue siendo placeholder.
+Guía web del asistente para **CONAL 2026 – El Camino del Silletero · Medellín**,
+la convención de ANEIAP.
+- Lema: **"Sembrando ideas, cosechando impacto"**.
+- Fechas: **21, 22 y 23 de noviembre de 2026** (zona horaria `America/Bogota`, UTC-05:00).
+- Idioma: español de Colombia, trato de "tú".
+- Formato: guía **mobile-first**, de una sola página con navegación por anclas.
+- Publicada en GitHub Pages: `https://tmaristi.github.io/CONAL-MEDELLIN2026/`.
 
-**Flujo de trabajo:** el equipo irá actualizando la información por rondas y soltando imágenes nuevas en `/assets/`. Cuando aparezca un archivo nuevo, Claude lo revisa (qué contiene, tamaño, fondo) y lo integra en la página: ruta en `content.js`, ubicación, `alt` y proporción, y actualiza `assets/LEEME.txt`.
+Todo el contenido vive en un único archivo, `content.js`, como objeto
+`window.CONTENT`. El contenido ya es **real y completo** (cronograma, planes,
+sedes, transporte, vestimenta, emergencias, multas, contactos, FAQ). Lo único
+pendiente son las 8 fotos del comité (ver más abajo).
 
 ## Stack y reglas técnicas
-- HTML + CSS + JavaScript vanilla. Sin framework y sin paso de build.
-- Se publica en **GitHub Pages**. Usa SOLO rutas relativas (`./assets/...`), porque el sitio vive en `/nombre-del-repo/`.
-- Incluye un archivo `.nojekyll` en la raíz.
-- Todo el contenido editable vive en `content.js` como `window.CONTENT = {...}`. No uses `fetch` de JSON ni módulos ES, para que `index.html` también abra con doble clic.
-- Cada texto temporal debe quedar marcado en `content.js` con el prefijo `[PLACEHOLDER]` o un comentario `// PLACEHOLDER`, para encontrarlos con una búsqueda.
-- Fuentes desde Google Fonts. Íconos como SVG inline (no uses emojis como íconos principales).
-- Accesibilidad: contraste suficiente, `alt` en imágenes, foco visible, respeta `prefers-reduced-motion`.
-- Rendimiento: imágenes optimizadas y con `loading="lazy"`, y animaciones ligeras (transform/opacity).
-- Probar siempre a 375 px de ancho primero, y luego en tablet y escritorio.
 
-## Marca (derivada del perfil de Instagram @conalaneiap)
-> Los HEX son **aproximados**, sacados de capturas. Cuando exista el logo en alta calidad en `/assets/`, muestrea los colores reales de ahí y actualiza las variables. Todo el color y la tipografía deben salir de variables CSS en `:root`, para cambiarlos en un solo lugar.
+- **HTML + CSS + JavaScript vanilla.** Sin framework y sin paso de build.
+- Se publica en **GitHub Pages**. Usa SOLO rutas relativas (`./assets/...`),
+  porque el sitio vive en `/CONAL-MEDELLIN2026/`.
+- Incluye un archivo `.nojekyll` en la raíz (evita el procesamiento Jekyll).
+- Todo el contenido editable vive en `content.js` como `window.CONTENT = {...}`.
+  No uses `fetch` de JSON ni módulos ES: `content.js` y `app.js` se cargan con
+  `<script>` clásicos (en ese orden) para que `index.html` también abra con doble
+  clic si hiciera falta.
+- Accesibilidad: contraste suficiente, `alt` en imágenes, foco visible, respeta
+  `prefers-reduced-motion`.
+- Rendimiento: imágenes optimizadas (recortadas al ratio de su contenedor y
+  comprimidas) y con `loading="lazy"`; animaciones ligeras (transform/opacity).
+- Probar a 375 px de ancho primero, luego tablet y escritorio.
+- `localStorage` se usa para el progreso del checklist de equipaje
+  (clave `conal2026:equipaje`). El modal de bienvenida se muestra **siempre** al
+  entrar (no guarda marca de "ya visto").
 
-### Paleta
-| Token | HEX aprox. | Uso |
+## Arquitectura de archivos
+
+```
+index.html   Estructura base + sprite SVG inline (íconos, skyline, flores, nubes, ondas).
+             Contiene el <link rel="icon"> al favicon y carga content.js y luego app.js.
+styles.css   Todos los estilos. La marca vive en variables de :root (ver abajo).
+app.js       Lógica. Lee window.CONTENT y construye el DOM de cada sección con
+             funciones render*(). No se edita para cambiar textos.
+content.js   Único archivo de contenido editable. Objeto window.CONTENT.
+assets/      logos/ (logo-conal.jpeg, texto-conal.jpeg, favicon.png, deco-01..09),
+             fotos/, sedes/, vestimenta/, comite/ (pendiente).
+.nojekyll    Necesario para GitHub Pages.
+referencias/ Material de trabajo (originales en alta, documentos fuente). En .gitignore.
+```
+
+Cómo funciona el render: `app.js` tiene una función `render<Seccion>()` por cada
+sección que lee su rama de `window.CONTENT` y escribe el HTML. Las listas
+(planes, contactos, FAQ, cronograma, etc.) se generan con `.map()`, así que
+agregar o quitar elementos se hace **solo en `content.js`**, sin tocar `app.js`.
+
+### Helper de imágenes y fallback
+
+`media(src, opts)` genera un contenedor `.media` con la imagen. `wireMedia()`
+le añade la clase `is-missing` si el archivo no existe, mostrando un placeholder
+de color. Para soltar un asset nuevo basta con ponerlo en la ruta exacta que
+espera `content.js`; aparece solo. En los contactos, el fallback son las
+**iniciales** del nombre (generadas en `renderContactos`), no un recuadro.
+
+## Marca
+
+Todo el color y la tipografía salen de variables en `:root` (en `styles.css`).
+Cámbialas ahí en un solo lugar. Estos son los valores **reales** en uso:
+
+### Paleta (valores exactos de styles.css)
+
+| Token | HEX | Uso |
 |---|---|---|
-| `--fucsia` | `#E6197F` | Color principal: fondos de bloques, botones, la "C" del logo |
-| `--orquidea` | `#B5126F` | Fucsia oscuro: hover, sombras, detalles de la orquídea |
-| `--morado-profundo` | `#3A0F6E` | Color de titulares y texto fuerte sobre fondo claro |
-| `--morado` | `#6A2BB8` | Acento secundario, la "N" del logo, góndolas |
-| `--amarillo` | `#FFC21A` | Acentos, subrayados de pincel, fondos de bloques (la "A") |
+| `--fucsia` | `#E1187D` | Color principal: bloques, botones, la "C" del logo |
+| `--orquidea` | `#B5126F` | Fucsia oscuro: hover, sombras, orquídea |
+| `--morado-profundo` | `#3A0F6E` | Titulares y texto fuerte sobre fondo claro |
+| `--morado` | `#7326C3` | Acento secundario, la "N" del logo |
+| `--amarillo` | `#FFC21A` | Acentos, subrayados de pincel, bloques (la "A") |
 | `--azul` | `#2E64D9` | Acento (la "L"), enlaces |
-| `--azul-aneiap` | `#1B5FB4` | Solo para el logo ANEIAP |
-| `--naranja` | `#FF7A1A` | Acentos cálidos (ave del paraíso, "impacto") |
-| `--verde` | `#3E9B3F` | Hojas, "Sembrando", estados OK |
-| `--lima` | `#8CC63F` | Detalle del logo ANEIAP |
+| `--azul-aneiap` | `#1B5FB4` | Reservado para contexto ANEIAP |
+| `--naranja` | `#ED5125` | Acentos cálidos (ave del paraíso) |
+| `--verde` | `#128D45` | Hojas, estados OK |
+| `--lima` | `#8CC63F` | Detalle verde claro |
 | `--cielo` | `#A8DDF7` | Fondos de bloques suaves |
-| `--blanco` | `#FFFFFF` | Fondo base de la página |
-| `--tinta` | `#1A1A1A` | Líneas del dibujo del skyline y texto de cuerpo |
+| `--blanco` | `#FFFFFF` | Fondo base |
+| `--tinta` | `#1A1A1A` | Líneas del skyline y texto de cuerpo |
+
+Derivados: `--cielo-suave #E8F6FE`, `--crema #FFF9EC`, `--gris #5C5566`,
+`--gris-claro #EFECF3`, `--rojo #D92B2B` (emergencias).
 
 Reglas de color:
-- Fondo base blanco, con bloques de color fucsia, amarillo, morado y cielo para separar secciones.
-- Los titulares van en `--morado-profundo`, con una palabra clave en script y en `--fucsia`.
-- El amarillo NO va como texto sobre blanco (no hay contraste): úsalo para rellenos y subrayados.
-- Las 4 letras del logo (fucsia, morado, amarillo, azul) pueden rotar como colores de las secciones o los días (Día 1 fucsia, Día 2 morado, Día 3 amarillo).
+- Fondo base blanco, con bloques fucsia, amarillo, morado y cielo para separar secciones.
+- Titulares en `--morado-profundo`, con una palabra clave en script y en `--fucsia`.
+- El amarillo NO va como texto sobre blanco (sin contraste): úsalo en rellenos y
+  subrayados, o con texto en `--morado-profundo`. Lo mismo aplica al cielo.
+- Las 4 letras del logo rotan como colores de día: Día 1 fucsia, Día 2 morado, Día 3 amarillo.
 
-### Tipografía (aproximación en Google Fonts, confirmar con el equipo de diseño)
-- **Display** (títulos grandes, redondeado y grueso, estilo letras del logo): `Baloo 2` peso 800.
-- **Script** (palabra destacada tipo pincel, inclinada): `Kaushan Script`. Alternativa: `Caveat Brush`.
-- **Cuerpo**: `Nunito` pesos 400/600/700.
-Defínelas como `--font-display`, `--font-script` y `--font-body`.
+### Tipografía (Google Fonts)
 
-### Formas y lenguaje visual
-- Esquinas muy redondeadas (tarjetas 20–28 px, botones tipo píldora).
-- **Ondas orgánicas** (swoosh) fucsia y amarillas en las esquinas superiores de las secciones.
-- **Nubes** de solo contorno en azul cielo, sobre fondo blanco.
-- **Garabatos tipo confeti** alrededor de los títulos: estrellitas de 4 puntas, gotas, óvalos de solo contorno, garabatos ondulados y rayitas, en fucsia, morado, amarillo, naranja y azul.
-- **Subrayado de pincel** amarillo bajo los títulos.
-- **Skyline de Medellín en línea negra** sobre blanco, estilo página para colorear: edificios, montañas, Metro elevado y Metrocable con góndolas moradas. Es el divisor/pie de las secciones principales.
-- **Borde botánico** en la base: hojas verdes y flores saturadas (orquídea cattleya fucsia, girasol, ave del paraíso naranja y azul, agapanto azul-morado, boca de dragón).
-- **Etiqueta blanca** redondeada arriba a la derecha con los logos ANEIAP y el sello CONAL.
-- Si no hay assets reales, aproxima con SVG sencillos y deja un hueco claramente nombrado para reemplazarlos luego.
+- `--font-display`: **Baloo 2** (peso 800) — títulos, estilo de las letras del logo.
+- `--font-script`: **Kaushan Script** — palabra destacada tipo pincel.
+- `--font-body`: **Nunito** (400/600/700) — cuerpo.
+
+### Forma y lenguaje visual
+
+- Esquinas muy redondeadas (`--r-md 20px`, `--r-lg 28px`, `--r-xl 36px`, botones píldora).
+- Ondas orgánicas, nubes de contorno, garabatos tipo confeti alrededor de los
+  títulos, subrayado de pincel amarillo, skyline de Medellín en línea negra y
+  borde botánico — todo como SVG inline en `index.html` o como decoraciones PNG
+  (`assets/logos/deco-01..09`).
+- Los títulos de sección se adornan con las decoraciones de `content.js` →
+  `meta.decoraciones` (`decorarTitulos()` en app.js), evitando poner una
+  decoración del mismo color que el fondo de la sección.
 
 ### Voz y tono
-Festivo, cercano y juvenil, con humor y color paisa/antioqueño ("silletero", "Sembrando ideas, cosechando impacto"). Frases cortas, imperativos amables ("Toca cada elemento para marcarlo"). Sin tono corporativo frío. Las fotos graciosas (los monos capuchinos disfrazados del feed) sirven para FAQ, bienvenida y cierre, no para información crítica como Emergencias.
 
-### Logos (ver `/assets/`)
-- `logo-conal` (palabra CONAL con la orquídea en la "O") y `lema` ("Sembrando ideas, cosechando impacto").
-- `logo-aneiap`.
-- `sello-conal` (círculo con aro arcoíris: "CONAL · El camino del silletero · Medellín 2026").
-- Usa SVG o PNG con fondo transparente. No recrees ni modifiques los logos: se usan tal cual. Mientras no estén, deja `<img>` con un recuadro temporal que diga "LOGO".
+Festivo, cercano y juvenil, con color paisa/antioqueño ("silletero", el lema del
+evento). Frases cortas, imperativos amables ("Toca cada elemento para marcarlo").
+Sin tono corporativo frío. **Excepción:** la sección de Emergencias es sobria,
+sin humor ni adornos.
 
-## Estructura del sitio (resumen; el detalle está en PROMPT_INICIAL.md)
-Inicio · Cronograma · Sedes · Planes · Transporte · Equipaje · Vestimenta · Emergencias · Multas · Contactos · FAQ
+### Logos y assets de marca
 
-## Estructura de carpetas
-```
-/index.html
-/styles.css
-/app.js
-/content.js        <- todo el contenido editable (placeholders)
-/assets/           <- logos, fotos, íconos
-/referencias/      <- capturas del Instagram y de la guía de referencia (solo consulta, no se publica)
-/.nojekyll
-```
+- `logo-conal.jpeg` — palabra CONAL con la orquídea en la "O".
+- `texto-conal.jpeg` — el lema "Sembrando ideas, cosechando impacto".
+- `favicon.png` — la orquídea del logo recortada en círculo (fondo transparente).
+- `deco-01..09` — decoraciones PNG transparentes de los títulos.
+- No recrees ni modifiques los logos: se usan tal cual.
+
+## Secciones del sitio
+
+Inicio (cuenta regresiva + accesos rápidos) · Cronograma · Sedes · Planes ·
+Transporte · Equipaje · Vestimenta · Emergencias · Multas · Contactos · FAQ.
+El orden del menú lo define `content.js` → `nav`.
+
+## Estado y pendientes
+
+- Contenido: **completo**, sin placeholders visibles. El token `[PLACEHOLDER]`
+  solo sigue existiendo como mecanismo interno (constante `PH_TOKEN` en app.js y
+  su estilo en styles.css), para marcar futuros datos pendientes si hiciera falta.
+- Assets presentes: logo, lema, favicon, 9 decoraciones, fotos de bienvenida,
+  comunidad, cronograma, faq, 2 sedes y 3 de vestimenta (todas optimizadas).
+- **Pendiente:** las 8 fotos del comité (`assets/comite/contacto-1.jpg` …
+  `contacto-8.jpg`). Mientras no estén, cada contacto muestra sus iniciales.
+- Decisiones tomadas: se eliminó el PDF descargable y sus botones; se quitó el
+  logo de ANEIAP del pie (solo queda el de CONAL, centrado); se eliminó el dato
+  `sello` por no usarse; el modal de bienvenida aparece en cada visita.
 
 ## Cómo trabajar
-1. Lee este archivo y mira las imágenes en `/referencias/` antes de proponer nada.
-2. Propón un plan corto y espera aprobación antes de escribir el código.
-3. Construye primero la estructura completa con placeholders, y luego pule el diseño.
-4. No inventes datos "reales" (precios, horarios, direcciones, teléfonos): todo lo que no se haya dado es placeholder visible.
-5. Si algo de la marca es dudoso (tipografía exacta, un color), usa la aproximación y dilo al final en una lista corta.
+
+1. Lee este archivo antes de proponer cambios. Si vas a tocar una sección, lee
+   también su rama en `content.js` y su `render*()` en `app.js`.
+2. Para cambios de contenido, edita solo `content.js`.
+3. No inventes datos reales (precios, horarios, direcciones, teléfonos): usa como
+   fuente los documentos en `referencias/` o pregunta.
+4. Al optimizar imágenes, recórtalas al ratio del contenedor donde se muestran
+   (lo define `styles.css`) y comprímelas; respalda el original en `referencias/`.
+5. Verifica tras cada cambio: `node --check` en los JS y sirve con
+   `python -m http.server` para revisar en el navegador.
+6. Los commits y el `git push` los hace la persona dueña del repo.
