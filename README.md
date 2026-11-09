@@ -116,3 +116,17 @@ GitHub Pages sin configurar nada.
 
 Si vas a trabajar el código a fondo, el detalle técnico completo —paleta exacta,
 tipografías, lenguaje visual y reglas de implementación— está en **`CLAUDE.md`**.
+
+---
+
+## Licencia
+
+El **código** de este proyecto (HTML, CSS y JavaScript) se publica bajo la
+licencia **MIT** (ver el archivo [`LICENSE`](LICENSE)). Puedes reutilizarlo y
+adaptarlo —por ejemplo, para la guía de otro capítulo— conservando el aviso de
+copyright.
+
+La licencia MIT cubre **solo el código**. No incluye los activos de marca del
+evento (el logo de CONAL, el lema, las decoraciones, los colores y la identidad
+visual de ANEIAP) ni las fotografías de las personas: esos materiales son
+propiedad de sus titulares y no se licencian para reutilización.
