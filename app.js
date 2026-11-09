@@ -11,7 +11,6 @@
 
   var PH_TOKEN = '[PLACEHOLDER]';
   var LS_PACK = 'conal2026:equipaje';
-  var LS_WELCOME = 'conal2026:bienvenida';
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -895,10 +894,6 @@
   /* ═══════════════════════════ BIENVENIDA ═══════════════════════════ */
 
   function renderBienvenida() {
-    var vista;
-    try { vista = localStorage.getItem(LS_WELCOME); } catch (e) { vista = '1'; }
-    if (vista) return;
-
     var b = C.bienvenida, modal = $('[data-welcome]');
     $('[data-welcome-card]').innerHTML =
       '<button class="iconbtn modal__close" type="button" data-welcome-close>' + icon('close') + '<span class="sr">' + esc(C.ui.cerrar) + '</span></button>' +
@@ -917,7 +912,6 @@
     var cerrar = function () {
       modal.hidden = true;
       document.body.style.overflow = '';
-      try { localStorage.setItem(LS_WELCOME, '1'); } catch (e) {}
     };
     $$('[data-welcome-close]', modal).forEach(function (b2) { b2.addEventListener('click', cerrar); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) cerrar(); });
