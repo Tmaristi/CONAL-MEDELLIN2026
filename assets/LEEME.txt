@@ -1,31 +1,44 @@
-Archivos que la guia espera (sueltalos con este nombre exacto y aparecen solos):
+ARCHIVOS DE IMAGEN DE LA GUIA
+
+Suelta cada archivo con el nombre EXACTO que aparece aqui, en su carpeta, y
+aparece solo en la pagina (no hay que tocar codigo). Si cambias un nombre,
+actualizalo tambien en content.js.
+
+Estado: [YA ESTA] = presente  ·  [FALTA] = pendiente de conseguir.
+
 
 logos/
-  logo-conal.jpeg     [YA ESTA] Palabra CONAL con la orquidea en la O (1206x589, fondo blanco)
-  texto-conal.jpeg    [YA ESTA] Lema "Sembrando ideas, cosechando impacto" (1206x328, fondo blanco)
-  deco-01 ... deco-09 [YA ESTAN] Decoraciones del logo (PNG transparentes): adornan los titulos
-                      de seccion. La lista y su forma/color estan en content.js -> meta.decoraciones
-  logo-aneiap.png     Logo ANEIAP
-  sello-conal.png     Sello circular "El camino del silletero"
-  favicon.png         Icono de la pestana (32x32 o 180x180)
+  logo-conal.jpeg   [YA ESTA]  Palabra CONAL con la orquidea en la O (1206x589, fondo blanco)
+  texto-conal.jpeg  [YA ESTA]  Lema "Sembrando ideas, cosechando impacto" (1206x328, fondo blanco)
+  favicon.png       [YA ESTA]  Icono de la pestana: la orquidea del logo recortada en circulo (180x180)
+  deco-01..deco-09  [YA ESTAN] Decoraciones del logo (PNG transparentes) que adornan los titulos.
+                               La lista y su forma/color estan en content.js -> meta.decoraciones
 
 fotos/
-  hero.jpg            Foto de fondo del inicio (horizontal, min. 1600px de ancho)
-  bienvenida.jpg      Foto del modal de bienvenida (16:9)
-  comunidad.jpg       Foto grande del bloque de cierre del inicio
-  cronograma.jpg      Foto que encabeza el cronograma
-  faq.jpg             Foto de la seccion de preguntas frecuentes (4:3)
+  hero.jpg          [FALTA]    Foto de fondo del inicio (horizontal, min. 1600px de ancho).
+                               Por ahora se usa a proposito el recuadro placeholder.
+  bienvenida.jpg    [YA ESTA]  Foto del modal de bienvenida (horizontal 16:9)
+  comunidad.jpg     [YA ESTA]  Foto del bloque de cierre del inicio
+  cronograma.jpg    [YA ESTA]  Foto que encabeza el cronograma (panoramica, 21:8)
+  faq.jpg           [YA ESTA]  Foto de la seccion de preguntas frecuentes (horizontal 4:3)
 
 sedes/
-  sede-1.jpg          Sede del dia 1
-  sede-2.jpg          Sede de los dias 2 y 3
+  sede-1.jpg        [YA ESTA]  Sede del dia 1
+  sede-2.jpg        [YA ESTA]  Sede de los dias 2 y 3
 
 vestimenta/
-  dia-1.jpg  dia-2.jpg  dia-3.jpg    Ejemplos de vestimenta (vertical 4:5)
+  dia-1.jpg         [YA ESTA]  Vestimenta dia 1 (vertical 4:5)
+  dia-2.jpg         [YA ESTA]  Vestimenta dia 2 (vertical 4:5)
+  dia-3.jpg         [YA ESTA]  Vestimenta dia 3 (vertical 4:5)
 
 comite/
-  contacto-1.jpg ... contacto-6.jpg  Fotos del comite (cuadradas)
+  contacto-1.jpg ... contacto-8.jpg   [FALTAN]  Fotos de los 8 coordinadores del comite (cuadradas).
+                               Mientras no esten, cada contacto muestra las iniciales de su nombre.
+                               El orden corresponde al de content.js -> contactos.lista.
 
-guia-conal-2026.pdf   PDF descargable (va directo en /assets/)
 
-Si cambias un nombre, actualizalo tambien en content.js.
+CONSEJOS
+- Recorta cada foto a la proporcion indicada y comprimela antes de subirla
+  (las fotos de celular pesan varios MB; conviene dejarlas por debajo de ~300 KB).
+- Si tienes el original pesado, guardalo en referencias/ (esa carpeta no se publica).
+- Detalle tecnico y de marca completo: ver CLAUDE.md en la raiz del proyecto.

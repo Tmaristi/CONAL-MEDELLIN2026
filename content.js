@@ -631,6 +631,7 @@ window.CONTENT = {
         foto: './assets/vestimenta/dia-1.jpg',
         si: [
           'Camiseta capitular',
+          'Recomendamos ponerse camisa blanca debajo de la camisa capitular para el momento del transporte. ¡Déjate sorprender!',
           'Jean sin rotos o pantalón largo',
           'Zapatos cerrados y cómodos (caminarás por el campus)',
           'Chaqueta ligera para el auditorio y el viaje'
