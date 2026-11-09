@@ -417,6 +417,24 @@ window.CONTENT = {
         inscripcion: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbA1vim943ipLDo25JEQfmDmfhy-ZvdEfjq9xOu4YHm6V2Q/viewform'
       },
       {
+        id: 'chiva-rumbera',
+        fecha: '2026-11-19',
+        fechaCorta: 'Jue 19 nov',
+        fechaLarga: 'Jueves 19 de noviembre',
+        nombre: 'Chiva Rumbera',
+        cuando: 'Noche · 10:00 p. m.',
+        hora: '10:00 p. m.',
+        descripcion: 'Recorrido nocturno por Medellín a bordo de una chiva, el bus tradicional de colores de la cultura antioqueña, con música, luces y ambiente de fiesta. Es una forma distinta de conocer la ciudad de noche e integrarse con asistentes de otros capítulos antes de la convención.',
+        valor: '$35.000 por persona',
+        valorCorto: '$35.000',
+        cupos: '50',
+        lugar: 'Recorrido por la avenida Las Palmas',
+        duracion: '4 horas',
+        puntoEncuentro: 'Carrera 70',
+        recomendaciones: 'Ropa cómoda, documento de identidad y abrigo.',
+        inscripcion: 'https://forms.gle/mVj7y7aN7m36gUB7A'
+      },
+      {
         id: 'planchon-guatape',
         fecha: '2026-11-20',
         fechaCorta: 'Vie 20 nov',
@@ -765,7 +783,7 @@ window.CONTENT = {
 
     lista: [
       { nombre: 'María Isabel Cañas Duque',      rol: 'Coordinadora General',             telefono: '+57 302 406 4959', tel: '+573024064959', foto: './assets/comite/contacto-1.jpg', color: 'fucsia' },
-      { nombre: 'Paola Andrea Cañizares Garcés',  rol: 'Coordinadora General',             telefono: '+57 301 510 9001', tel: '+573015109001', foto: './assets/comite/contacto-2.jpg', color: 'morado' },
+      { nombre: 'Paola Andrea Garcés',  rol: 'Coordinadora General',             telefono: '+57 301 510 9001', tel: '+573015109001', foto: './assets/comite/contacto-2.jpg', color: 'morado' },
       { nombre: 'Susana Roldán Restrepo',         rol: 'Coordinadora Académico',           telefono: '+57 300 614 8677', tel: '+573006148677', foto: './assets/comite/contacto-3.jpg', color: 'amarillo' },
       { nombre: 'María Antonia Bolívar Sierra',   rol: 'Coordinadora Publicidad',          telefono: '+57 314 718 9965', tel: '+573147189965', foto: './assets/comite/contacto-4.jpg', color: 'azul' },
       { nombre: 'Ana Isabel Angarita Escobar',    rol: 'Coordinadora Logística Interna',   telefono: '+57 322 527 0106', tel: '+573225270106', foto: './assets/comite/contacto-5.jpg', color: 'naranja' },
@@ -801,7 +819,7 @@ window.CONTENT = {
       { p: '¿Puedo invitar a alguien que no esté inscrito?',       r: 'No. El hospedaje y las actividades de los días 2 y 3 son de uso exclusivo para los ANEIAPos y delegados inscritos. En el Día 1, las personas externas solo pueden asistir con el corte Hortensia.' },
       { p: '¿Hay wifi en las sedes?',                              r: 'Sí. El Yarumito tiene wifi en las habitaciones, las zonas comunes y el salón múltiple. Lleva tu cargador y, si puedes, una batería externa.' },
       { p: '¿Cómo me devuelvo el último día?',                     r: 'En el transporte oficial. El lunes 23 los buses salen de El Yarumito a las 6:00 p. m. y llegan a Medellín hacia las 8:00 p. m. Si tienes vuelo o bus de regreso ese día, cómpralo para después de las 9:00 p. m. o para el martes.' },
-      { p: '¿A quién le escribo si algo no me queda claro?',       r: 'Puedes contactar directamente a las coordinadoras generales: María Isabel Cañas, 302 406 4959; Paola Cañizares, 301 510 9001. Todos los contactos del comité están en la sección de Contactos.' }
+      { p: '¿A quién le escribo si algo no me queda claro?',       r: 'Puedes contactar directamente a las coordinadoras generales: María Isabel Cañas, 302 406 4959; Paola Garcés, 301 510 9001. Todos los contactos del comité están en la sección de Contactos.' }
     ]
   },
 
