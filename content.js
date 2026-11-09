@@ -58,8 +58,7 @@ window.CONTENT = {
       { archivo: './assets/logos/deco-05-abanico-naranja.png',   forma: 'abanico',   color: 'naranja' },
       { archivo: './assets/logos/deco-03-gota-morada-arriba.png',forma: 'gota',      color: 'morado' },
       { archivo: './assets/logos/deco-06-gota-rosa.png',         forma: 'gota',      color: 'fucsia' }
-    ],
-    sello: './assets/logos/sello-conal.png'
+    ]
   },
 
   /* ─────────────────────────────────────────────────────────────────────────
