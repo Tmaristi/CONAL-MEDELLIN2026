@@ -142,6 +142,21 @@
     return '<span class="doodles" aria-hidden="true"></span>';
   }
 
+  /**
+   * Botón de inspiración de outfits: enlace a Pinterest que abre en pestaña
+   * nueva. Devuelve '' si no hay datos, así los sitios sin inspiración
+   * (p. ej. el Día 3) no pintan nada.
+   */
+  function inspoCard(insp, color, labelBoton) {
+    if (!insp || !insp.url) return '';
+    var c = color || 'fucsia';
+    return '<div class="inspo" style="--c:var(--' + c + ')">' +
+      '<a class="btn inspo__btn" href="' + esc(insp.url) + '" target="_blank" rel="noopener noreferrer">' +
+        esc(labelBoton || 'Ver inspiración en Pinterest') +
+        icon('arrow') + '<span class="sr"> (abre en una pestaña nueva)</span></a>' +
+    '</div>';
+  }
+
   // Colores de decoración que no se verían sobre cada fondo de sección.
   var DECO_CHOCA = {
     'sec--fucsia': ['fucsia', 'morado'],
@@ -539,7 +554,8 @@
       formato(dest.descripcion) +
       chips(dest) +
       '<dl class="pdets pdets--banner">' + detalles(dest) + '</dl>' +
-      accion(dest) + '</article>' : '';
+      accion(dest) +
+      inspoCard(dest.inspiracion, 'fucsia', C.vestimenta.inspoBoton) + '</article>' : '';
 
     var resumen = '<div class="presumen reveal"><h3 class="presumen__t">' + esc(p.resumenTitulo) + '</h3><ol>' +
       p.lista.map(function (it) {
@@ -757,6 +773,7 @@
             '<h3>' + esc(d.tab) + '</h3>' +
             '<p class="dress__desc">' + ph(d.descripcion) + '</p>' +
             '<div class="dolists">' + lista(d.si, 'si') + lista(d.no, 'no') + '</div>' +
+            inspoCard(d.inspiracion, d.color, v.inspoBoton) +
           '</div>' +
         '</div></div>';
     }).join('');

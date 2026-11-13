@@ -808,6 +808,11 @@ table{border-collapse:collapse;width:100%}
 @media (min-width:720px){.dolists{grid-template-columns:1fr 1fr}}
 @media (min-width:900px){.dress{grid-template-columns:360px 1fr;align-items:start;gap:34px}}
 
+/* Botón de inspiración de outfits (Pinterest) · se usa en Vestimenta y en el
+   banner del Pre-evento. El color de acento llega por --c. */
+.inspo{margin-top:16px}
+.inspo__btn{--bg:var(--c);--fg:#fff;align-self:flex-start}
+
 /* =============================================================================
    EMERGENCIAS · sobria
    ============================================================================= */

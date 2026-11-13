@@ -268,12 +268,12 @@ window.CONTENT = {
       {
         etiqueta: 'DÍA 1',
         color: 'fucsia',
-        nombre: 'Sede principal · Universidad de Antioquia',
+        nombre: 'Auditorio Principal Edificio de Extensión UdeA',
         descripcion: 'Aquí ocurren el registro, el acto de apertura y la jornada académica del primer día.',
         comoLlegar: 'Estación de Metro más cercana: Universidad. También llegan rutas de bus y servicios de transporte por aplicación.',
-        direccion: 'Calle 67 N.º 53-108 (Ciudad Universitaria) · Medellín',
+        direccion: 'Calle 70 # 52 - 72 Medellín, Antioquia · Medellín',
         foto: './assets/sedes/sede-1.jpg',
-        mapa: 'https://maps.app.goo.gl/qjiGXp1io8smq7Zu9'
+        mapa: 'https://maps.app.goo.gl/mR1r7sBj7oprk7jN7?g_st=iw'
       },
       {
         etiqueta: 'DÍAS 2 Y 3',
@@ -466,7 +466,10 @@ window.CONTENT = {
         lugar: 'Discoteca ALMA',
         recomendaciones: 'Descansa: al día siguiente la acreditación empieza a las 7:00 a. m. en la Universidad de Antioquia.',
         // Sin formulario: el botón lleva al bloque de "Reservas e información".
-        botonSinInscripcion: 'Reservas e información'
+        botonSinInscripcion: 'Reservas e información',
+        inspiracion: {
+          url: 'https://pin.it/4zmAfgLOk'
+        }
       },
       {
         id: 'tour-silletero',
@@ -640,7 +643,10 @@ window.CONTENT = {
           'Jeans rotos, shorts, bermudas o faldas cortas',
           'Chanclas, sandalias o crocs',
           'Gorras y gafas de sol dentro del auditorio'
-        ]
+        ],
+        inspiracion: {
+          url: 'https://pin.it/1fkxh5PZ7'
+        }
       },
       {
         id: 'vest-dia-2',
@@ -660,7 +666,10 @@ window.CONTENT = {
           'Jeans rotos, shorts o bermudas',
           'Chanclas o sandalias',
           'En la gala: ropa deportiva, jean o tenis'
-        ]
+        ],
+        inspiracion: {
+          url: 'https://pin.it/4qbMamAgU'
+        }
       },
       {
         id: 'vest-dia-3',
@@ -685,7 +694,8 @@ window.CONTENT = {
     ],
 
     tituloSi: 'Sí lleva',
-    tituloNo: 'Evita'
+    tituloNo: 'Evita',
+    inspoBoton: 'Ver inspiración en Pinterest'
   },
 
   /* ─────────────────────────────────────────────────────────────────────────
