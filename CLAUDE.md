@@ -66,6 +66,17 @@ de color. Para soltar un asset nuevo basta con ponerlo en la ruta exacta que
 espera `content.js`; aparece solo. En los contactos, el fallback son las
 **iniciales** del nombre (generadas en `renderContactos`), no un recuadro.
 
+### Inspiración de outfits (botón a Pinterest)
+
+El Día 1 y el Día 2 (`vestimenta.dias[]`) y el **Pre-evento** (entrada
+`pre-evento` de `planes.lista`, el plan `destacado`) tienen un campo
+`inspiracion: { url }` que pinta un botón "Ver inspiración en Pinterest" (abre en
+pestaña nueva). Lo genera el helper `inspoCard(insp, color, labelBoton)` de
+`app.js`, usado en `renderVestimenta()` y en el banner de `renderPlanes()`; si un
+día no trae `inspiracion` (p. ej. el Día 3), no pinta nada. El texto del botón
+vive en `vestimenta.inspoBoton`. Para cambiar un link, edita solo `content.js` →
+`inspiracion.url`.
+
 ## Marca
 
 Todo el color y la tipografía salen de variables en `:root` (en `styles.css`).
