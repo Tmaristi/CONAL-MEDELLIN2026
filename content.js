@@ -307,10 +307,8 @@ window.CONTENT = {
     // Chips de filtro. "fecha" debe coincidir con la "fecha" de cada plan.
     filtros: [
       { fecha: '',           label: 'Todos' },
-      { fecha: '2026-11-18', label: 'Mié 18 nov' },
       { fecha: '2026-11-19', label: 'Jue 19 nov' },
-      { fecha: '2026-11-20', label: 'Vie 20 nov' },
-      { fecha: '2026-11-24', label: 'Mar 24 nov' }
+      { fecha: '2026-11-20', label: 'Vie 20 nov' }
     ],
 
     resumenTitulo: 'Resumen rápido',
@@ -341,42 +339,6 @@ window.CONTENT = {
        • Sin "inscripcion": en vez de "Inscríbete" sale "Reservas e información". */
     lista: [
       {
-        id: 'parque-explora',
-        fecha: '2026-11-18',
-        fechaCorta: 'Mié 18 nov',
-        fechaLarga: 'Miércoles 18 de noviembre',
-        nombre: 'Parque Explora',
-        cuando: 'Mañana · 9:00 a. m.',
-        hora: '9:00 a. m.',
-        descripcion: 'Museo interactivo de ciencia y tecnología con salas de experimentación, el acuario de agua dulce más grande de Suramérica y el vivario. Un plan ideal para ingenieros curiosos.',
-        valor: '$50.000 por persona',
-        valorCorto: '$50.000',
-        cupos: 'Ilimitados',
-        lugar: 'Carrera 52 # 73-75, Medellín (frente a la estación Universidad del Metro)',
-        duracion: '3 a 4 horas',
-        puntoEncuentro: 'Estación Universidad del Metro',
-        recomendaciones: 'Ropa cómoda, documento de identidad y carné estudiantil.',
-        inscripcion: 'https://docs.google.com/forms/d/e/1FAIpQLSfrkjOkNAiaOkTb9vTUusjpnBYJ5w2D40PESvQTq2sFwZlaUQ/viewform'
-      },
-      {
-        id: 'museo-el-castillo',
-        fecha: '2026-11-18',
-        fechaCorta: 'Mié 18 nov',
-        fechaLarga: 'Miércoles 18 de noviembre',
-        nombre: 'Museo El Castillo',
-        cuando: 'Tarde · 1:00 p. m.',
-        hora: '1:00 p. m.',
-        descripcion: 'Castillo de estilo gótico de 1930 en El Poblado, con colecciones de arte decorativo europeo y jardines de inspiración francesa. Uno de los espacios patrimoniales más fotogénicos de la ciudad.',
-        valor: '$30.000 por persona',
-        valorCorto: '$30.000',
-        cupos: '25',
-        lugar: 'Calle 9 Sur # 32-269, El Poblado, Medellín',
-        duracion: '2 horas (recorrido guiado y jardines)',
-        puntoEncuentro: 'Estación Aguacatala del Metro',
-        recomendaciones: 'Llegar 15 minutos antes del recorrido. Lleva algo de efectivo para el transporte. Traer carné estudiantil.',
-        inscripcion: 'https://docs.google.com/forms/d/e/1FAIpQLSfPRqkwAYCwrehZhS_2I6pPXvnQkx2L0KyamRlQFvW81dpSng/viewform'
-      },
-      {
         id: 'tour-comuna-13',
         fecha: '2026-11-19',
         fechaCorta: 'Jue 19 nov',
@@ -394,25 +356,6 @@ window.CONTENT = {
         puntoEncuentro: 'Estación San Antonio del Metro',
         recomendaciones: 'Tenis cómodos (hay muchas escaleras), bloqueador, agua y efectivo para comprar algo a los emprendedores locales. No te separes del grupo.',
         inscripcion: 'https://docs.google.com/forms/d/e/1FAIpQLSdygX2XQKuw-htT8151z9cEdzRRclVuh2M77V5-QonNKFuAAw/viewform'
-      },
-      {
-        id: 'picnic-parques-del-rio',
-        fecha: '2026-11-19',
-        fechaCorta: 'Jue 19 nov',
-        fechaLarga: 'Jueves 19 de noviembre',
-        nombre: 'Picnic en Parques del Río',
-        cuando: 'Tarde · 4:00 p. m.',
-        hora: '4:00 p. m.',
-        descripcion: 'Tarde de integración al aire libre en Parques del Río, el corredor verde a orillas del río Medellín. Un espacio para conocer a asistentes de otros capítulos antes del evento.',
-        valor: '$10.000 por persona',
-        valorCorto: '$10.000',
-        // El documento del comité no indica cupos para este plan.
-        lugar: 'Parques del Río, Medellín (cerca de la estación Industriales del Metro)',
-        duracion: '2 a 3 horas',
-        incluye: 'Snacks dulces, salados y bebidas',
-        puntoEncuentro: 'Parques del Río',
-        recomendaciones: 'Chaqueta ligera y sombrilla: en noviembre suele llover en la tarde.',
-        inscripcion: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbA1vim943ipLDo25JEQfmDmfhy-ZvdEfjq9xOu4YHm6V2Q/viewform'
       },
       {
         id: 'chiva-rumbera',
@@ -441,8 +384,8 @@ window.CONTENT = {
         cuando: 'Salida 10:30 a. m. · Regreso 6:00 p. m.',
         hora: '10:30 a. m. – 6:00 p. m.',
         descripcion: 'Paseo en planchón por el embalse de Guatapé–El Peñol, uno de los paisajes más representativos de Antioquia, con música e integración a bordo.',
-        valor: '$120.000 por persona',
-        valorCorto: '$120.000',
+        valor: '$90.000 por persona',
+        valorCorto: '$90.000',
         cupos: '50',
         horario: 'Salida de Medellín a las 10:30 a. m. y regreso a las 6:00 p. m.',
         incluye: 'Transporte ida y vuelta hacia Medellín. Trayecto en el planchón y bebidas.',
@@ -470,24 +413,6 @@ window.CONTENT = {
         inspiracion: {
           url: 'https://pin.it/4zmAfgLOk'
         }
-      },
-      {
-        id: 'tour-silletero',
-        fecha: '2026-11-24',
-        fechaCorta: 'Mar 24 nov',
-        fechaLarga: 'Martes 24 de noviembre',
-        nombre: 'Tour silletero en Santa Elena',
-        cuando: 'Todo el día · Después del evento',
-        hora: 'Todo el día',
-        descripcion: 'Día completo en el corregimiento de Santa Elena para conocer la tradición silletera, patrimonio cultural de Antioquia e inspiración de la identidad de CONAL Medellín 2026: fincas de flores, historia de las silletas y cultura campesina.',
-        valor: '$120.000 con transporte',
-        valorCorto: '$120.000',
-        cupos: '10 personas en adelante',
-        horario: { texto: 'Todo el día (hora de salida y regreso por confirmar)', porConfirmar: true },   // POR CONFIRMAR
-        incluye: 'Recorrido guiado por los cultivos de flores, acceso a zonas comunes, charla y armado de silleta. Transporte ida y vuelta.',
-        puntoEncuentro: 'Estación San Antonio del Metro',
-        recomendaciones: 'Santa Elena es más fría que Medellín: lleva chaqueta, impermeable y zapatos cerrados.',
-        inscripcion: 'https://docs.google.com/forms/d/e/1FAIpQLScB8TxeOXw9kXzMU6WOfxh2dPG0qV0pw8bpF8uTrnBdBn7aZQ/viewform'
       }
     ],
 
