@@ -194,7 +194,7 @@ window.CONTENT = {
           { inicio: '13:50', fin: '14:20', actividad: 'Acreditación', tipo: 'acreditacion' },
           { inicio: '14:20', fin: '14:50', actividad: 'Espacio para mercadeo', tipo: 'mercadeo' },
           { inicio: '14:50', fin: '16:20', actividad: 'Panel 1 - Ingeniería para transformar territorios', tipo: 'academico' },
-          { inicio: '16:20', fin: '17:10', actividad: 'Espacio para mercadeo', tipo: 'mercadeo' },
+          { inicio: '16:20', fin: '17:10', actividad: 'Espacio de Cultura ANEIAP', tipo: 'mercadeo' },
           { inicio: '17:10', fin: '17:40', actividad: 'Acomodación en transporte y Refrigerio 2', tipo: 'traslado' },
           { inicio: '17:40', fin: '19:30', actividad: 'Traslado al hotel', tipo: 'traslado', detalle: 'Trayecto aproximado de 1 h 30 min a 2 h. Lugar por confirmar.' },
           { inicio: '19:30', fin: '20:00', actividad: 'Acomodación en habitaciones', tipo: 'logistica' },
